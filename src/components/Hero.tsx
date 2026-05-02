@@ -79,14 +79,14 @@ export default function Hero() {
             className="font-serif text-[2.6rem] md:text-[3.4rem] leading-[1.1] tracking-tight text-ink"
           >
             <span
-              className={`aryan-word ${isDark ? "flipped" : ""}`}
+              className={`aryan-flipper ${isDark ? "flipped" : ""}`}
               onClick={toggle}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => { if (e.key === "Enter") toggle(); }}
               title={isDark ? "Click to switch to light mode" : "Try clicking me!"}
             >
-              Aryan
+              <span className="aryan-word">Aryan</span>
             </span>{" "}
             Kumar
             <br />
