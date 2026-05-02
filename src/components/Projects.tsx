@@ -77,10 +77,10 @@ export default function Projects() {
                           onClick={() => toggle(p.title)}
                         >
                           <div className="min-w-0">
-                            <h3 className="font-serif text-[15px] md:text-base text-ink tracking-tightish mb-1.5">
+                            <h3 className="font-serif text-lg md:text-xl text-ink tracking-tightish mb-2 leading-snug">
                               {p.title}
                             </h3>
-                            <p className="text-[12px] leading-[1.6] text-muted">
+                            <p className="text-[13px] leading-[1.7] text-muted">
                               {p.description}
                             </p>
                           </div>
