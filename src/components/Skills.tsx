@@ -23,22 +23,25 @@ export default function Skills() {
       <hr className="section-divider mb-16 md:mb-24" />
 
       <FadeIn>
-        <span className="section-label">Skills & Tools</span>
-        <h2 className="section-heading mb-14">
-          What I <span className="text-accent italic">work</span> with.
-        </h2>
+        <div className="text-center mb-14">
+          <span className="section-label justify-center">Skills & Tools</span>
+          <h2 className="section-heading">
+            What I <span className="text-accent italic">work</span> with.
+          </h2>
+        </div>
       </FadeIn>
 
-      {/* Bento grid — 2 cols on md, 3 cols on lg */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* Bento grid — centered, 2 cols on md, 3 cols on lg */}
+      <div className="max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {skills.map((group, i) => (
           <FadeIn key={group.category} delay={i * 0.06}>
-            <div className="glass-card p-6 md:p-7 h-full">
-              <div className="flex items-center gap-3 mb-5">
+            <div className="glass-card p-6 md:p-7 h-full text-center">
+              <div className="flex items-center justify-center gap-3 mb-5">
                 <span className="text-xl">{group.icon}</span>
                 <h3 className="font-serif text-lg text-ink">{group.category}</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 {group.items.map((skill) => (
                   <SkillPill key={skill.name} name={skill.name} level={skill.level} />
                 ))}
@@ -46,6 +49,7 @@ export default function Skills() {
             </div>
           </FadeIn>
         ))}
+        </div>
       </div>
     </section>
   );

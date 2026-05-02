@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Qualifications from "@/components/Qualifications";
+import Featured from "@/components/Featured";
 import Interests from "@/components/Interests";
 import Contact from "@/components/Contact";
 
@@ -17,6 +19,8 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Qualifications />
+      <Featured />
       <Interests />
       <Contact />
     </div>
