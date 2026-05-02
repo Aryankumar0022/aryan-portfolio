@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTheme } from "./ThemeProvider";
 
 export default function Hero() {
+  const { theme, toggle } = useTheme();
+  const isDark = theme === "dark";
+
   return (
     <section className="pt-12 pb-20 md:pt-20 md:pb-28">
       <div className="grid md:grid-cols-[1fr_300px] gap-10 md:gap-14 items-center">
@@ -25,7 +29,16 @@ export default function Hero() {
             className="font-serif text-[2.8rem] md:text-[3.6rem] leading-[1.1] tracking-tight text-ink"
           >
             Hi, I&apos;m{" "}
-            <span className="text-accent">Aryan</span>
+            <span
+              className={`aryan-word text-accent ${isDark ? "flipped" : ""}`}
+              onClick={toggle}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === "Enter") toggle(); }}
+              title={isDark ? "Click to switch to light mode" : "Try clicking me!"}
+            >
+              Aryan
+            </span>
             <br />
             I build things
             <br />
