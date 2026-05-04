@@ -19,36 +19,33 @@ const levelDot: Record<Proficiency, string> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="skills" className="py-10 md:py-14">
+
 
       <FadeIn>
-        <div className="text-center mb-14">
-          <span className="section-label justify-center">Skills & Tools</span>
-          <h2 className="section-heading">
-            What I <span className="text-accent italic">work</span> with.
-          </h2>
+        <div className="text-center mb-16">
+          <h2 className="section-title">Skills and Tools</h2>
         </div>
       </FadeIn>
 
       {/* Bento grid — centered, 2 cols on md, 3 cols on lg */}
-      <div className="max-w-[1100px] mx-auto">
+      <div className="max-w-[1060px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {skills.map((group, i) => (
-          <FadeIn key={group.category} delay={i * 0.06}>
-            <div className="glass-card p-6 md:p-7 h-full text-center">
-              <div className="flex items-center justify-center gap-3 mb-5">
-                <span className="text-xl">{group.icon}</span>
-                <h3 className="font-serif text-lg text-ink">{group.category}</h3>
+          {skills.map((group, i) => (
+            <FadeIn key={group.category} delay={i * 0.06}>
+              <div className="glass-card p-6 md:p-7 h-full text-center">
+                <div className="flex items-center justify-center gap-3 mb-5">
+                  <span className="text-xl">{group.icon}</span>
+                  <h3 className="font-sans text-lg font-medium text-ink">{group.category}</h3>
+                </div>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {group.items.map((skill) => (
+                    <SkillPill key={skill.name} name={skill.name} level={skill.level} />
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                {group.items.map((skill) => (
-                  <SkillPill key={skill.name} name={skill.name} level={skill.level} />
-                ))}
-              </div>
-            </div>
-          </FadeIn>
-        ))}
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>
@@ -68,9 +65,8 @@ function SkillPill({ name, level }: { name: string; level: Proficiency }) {
 
       {/* Tooltip */}
       <div
-        className={`absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 transition-all duration-200 pointer-events-none ${
-          hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
-        }`}
+        className={`absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 transition-all duration-200 pointer-events-none ${hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+          }`}
       >
         <div className={`flex items-center gap-1.5 whitespace-nowrap px-3 py-1.5 rounded-full text-[11px] font-semibold border shadow-lg ${levelColor[level]}`}>
           <span className={`w-1.5 h-1.5 rounded-full ${levelDot[level]}`} />

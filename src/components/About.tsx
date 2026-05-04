@@ -3,22 +3,17 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="about" className="py-10 md:py-14">
+
 
       <FadeIn>
         <div className="text-center mb-12">
-          <span className="section-label justify-center">About Me</span>
-          <h2 className="section-heading">
-            A curious mind with
-            <br />
-            a love for <span className="text-accent italic">craft</span>.
-          </h2>
+          <h2 className="section-title">About Me</h2>
         </div>
       </FadeIn>
 
       {/* Two-column layout: photo left, text right */}
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1060px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] gap-10 md:gap-14 items-center">
           {/* Photo — left side */}
           <FadeIn delay={0.05}>
@@ -39,7 +34,7 @@ export default function About() {
 
           {/* Text — right side */}
           <FadeIn delay={0.1}>
-            <div className="space-y-5 text-[15px] leading-[1.85] body-text text-center md:text-left">
+            <div className="space-y-5 text-[20px] leading-[1.85] body-text text-center md:text-left">
               <p>
                 I&apos;m a software engineer drawn to problems where mathematics,
                 perception, and engineering overlap — most often in machine
@@ -63,11 +58,11 @@ export default function About() {
                   href="https://drive.google.com/file/d/your-resume-id/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline inline-flex items-center gap-2"
+                  className="btn-outline inline-flex items-center gap-4 px-15 py-6 text-2xl"
                 >
                   View Resume
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                   </svg>
                 </a>
               </div>

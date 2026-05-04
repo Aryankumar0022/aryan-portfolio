@@ -2,23 +2,18 @@ import FadeIn from "./motion/FadeIn";
 
 export default function Interests() {
   return (
-    <section id="interests" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="interests" className="py-10 md:py-14">
+
 
       <FadeIn>
         <div className="text-center mb-8">
-          <span className="section-label justify-center">Beyond Code</span>
-          <h2 className="section-heading">
-            Things that keep
-            <br />
-            me <span className="text-accent italic">curious</span>.
-          </h2>
+          <h2 className="section-title">Beyond Code</h2>
         </div>
       </FadeIn>
 
       <FadeIn delay={0.05}>
         <div className="glass-card p-7 md:p-10 max-w-[800px] mx-auto text-center">
-          <p className="text-[15px] leading-[1.9] body-text">
+          <p className="text-[20px] leading-[1.85] body-text">
             Beyond software, I spend time reading about{" "}
             <span className="font-medium text-accent">space exploration</span>,{" "}
             <span className="font-medium text-accent">aerodynamics</span>, and the

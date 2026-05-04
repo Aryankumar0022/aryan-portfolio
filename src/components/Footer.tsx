@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="mt-16 md:mt-24 border-t border-line">
       <div className="mx-auto max-w-page px-6 md:px-8 py-14 text-center">
         {/* Name */}
-        <span className="font-serif text-2xl text-accent tracking-tight">
+        <span className="font-sans text-3xl font-medium text-accent tracking-tight">
           Aryan Kumar
         </span>
 

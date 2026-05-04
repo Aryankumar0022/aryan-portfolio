@@ -19,25 +19,18 @@ export default function Projects() {
   const hasMore = projects.length > INITIAL_COUNT;
 
   return (
-    <section id="projects" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="projects" className="py-10 md:py-14">
+
 
       <FadeIn>
         <div className="text-center mb-14">
-          <span className="section-label justify-center">Projects</span>
-          <h2 className="section-heading mb-5">
-            Things I&apos;ve <span className="text-accent italic">built</span>.
-          </h2>
-          <p className="text-[15px] text-muted leading-relaxed max-w-[520px] mx-auto">
-            A few projects where I went from an idea to something real.
-            Each one taught me something I didn&apos;t expect.
-          </p>
+          <h2 className="section-title">Projects</h2>
         </div>
       </FadeIn>
 
       {/* Centered 2×2 compact grid */}
-      <div className="max-w-[1000px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="max-w-[1060px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AnimatePresence mode="popLayout">
             {visible.map((p, i) => {
               const isOpen = expanded === p.title;
@@ -65,7 +58,7 @@ export default function Projects() {
                         <span className="text-5xl md:text-6xl opacity-70">
                           {p.icon}
                         </span>
-                        <span className="absolute top-3 right-3 text-[11px] font-semibold tracking-wider uppercase text-accent bg-surface-solid backdrop-blur-sm px-3 py-1 rounded-full">
+                        <span className="absolute top-3 right-3 text-[11px] font-medium tracking-wider uppercase text-accent bg-surface-solid backdrop-blur-sm px-3 py-1 rounded-full">
                           {p.year}
                         </span>
                       </div>
@@ -77,10 +70,10 @@ export default function Projects() {
                           onClick={() => toggle(p.title)}
                         >
                           <div className="min-w-0">
-                            <h3 className="font-serif text-lg md:text-xl text-ink tracking-tightish mb-2 leading-snug">
+                            <h3 className="font-sans text-lg md:text-xl font-medium text-ink tracking-tight mb-1.5 leading-snug">
                               {p.title}
                             </h3>
-                            <p className="text-[13px] leading-[1.7] text-muted">
+                            <p className="text-[15px] leading-[1.75] text-muted">
                               {p.description}
                             </p>
                           </div>
@@ -103,15 +96,43 @@ export default function Projects() {
                         </div>
 
                         {/* Tech pills */}
-                        <div className="flex flex-wrap gap-1 mt-3">
+                        <div className="flex flex-wrap gap-1.5 mt-3">
                           {p.tech.map((t) => (
                             <span
                               key={t}
-                              className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-warm border border-line tech-pill"
+                              className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-warm border border-line tech-pill"
                             >
                               {t}
                             </span>
                           ))}
+                        </div>
+
+                        {/* Project Links */}
+                        <div className="flex items-center gap-4 mt-5">
+                          <a
+                            href={p.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-muted hover:text-ink transition-colors"
+                          >
+                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                          </a>
+                          <a
+                            href={p.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-muted hover:text-accent transition-colors"
+                          >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live View
+                          </a>
                         </div>
 
                         {/* Expandable details */}
@@ -124,17 +145,17 @@ export default function Projects() {
                               transition={{ duration: 0.35, ease: "easeInOut" }}
                               className="overflow-hidden"
                             >
-                              <div className="mt-4 pt-4 border-t border-line space-y-3 text-[13px] leading-[1.7]">
+                              <div className="mt-4 pt-4 border-t border-line space-y-3 text-[14px] leading-[1.75]">
                                 <div>
-                                  <span className="text-[10px] uppercase tracking-[0.1em] text-accent font-semibold">Problem</span>
+                                  <span className="text-[11px] uppercase tracking-[0.1em] text-accent font-medium">Problem</span>
                                   <p className="body-text mt-0.5">{p.problem}</p>
                                 </div>
                                 <div>
-                                  <span className="text-[10px] uppercase tracking-[0.1em] text-accent font-semibold">Approach</span>
+                                  <span className="text-[11px] uppercase tracking-[0.1em] text-accent font-medium">Approach</span>
                                   <p className="body-text mt-0.5">{p.approach}</p>
                                 </div>
                                 <div>
-                                  <span className="text-[10px] uppercase tracking-[0.1em] text-accent font-semibold">Outcome</span>
+                                  <span className="text-[11px] uppercase tracking-[0.1em] text-accent font-medium">Outcome</span>
                                   <p className="body-text mt-0.5">{p.outcome}</p>
                                 </div>
                               </div>

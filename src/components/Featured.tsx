@@ -9,7 +9,7 @@ type FeaturedItem = {
   date: string;
   keyword: string;
   image: string;
-  link: string;
+
 };
 
 const featured: FeaturedItem[] = [
@@ -18,45 +18,38 @@ const featured: FeaturedItem[] = [
     date: "August 2025",
     keyword: "Buildathon",
     image: "/images/featured-1.jpg",
-    link: "https://example.com/achievements/buildathon",
+
   },
   {
     title: "Runner-up at AMHacks Hackathon",
     date: "April 2025",
     keyword: "AMHacks",
     image: "/images/featured-2.jpg",
-    link: "https://example.com/achievements/amhacks",
+
   },
   {
     title: "Published Research Paper at IEEE Conference",
     date: "December 2024",
     keyword: "IEEE Research",
     image: "/images/featured-3.jpg",
-    link: "https://example.com/achievements/ieee-paper",
+
   },
   {
     title: "Selected for Google Summer of Code",
     date: "May 2024",
     keyword: "GSoC",
     image: "/images/featured-4.jpg",
-    link: "https://example.com/achievements/gsoc",
   },
 ];
 
 export default function Featured() {
   return (
-    <section id="featured" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="featured" className="py-10 md:py-14">
+
 
       <FadeIn>
         <div className="text-center mb-12">
-          <span className="section-label justify-center">Featured</span>
-          <h2 className="section-heading mb-3">
-            Achievements &amp; <span className="text-accent italic">highlights</span>.
-          </h2>
-          <p className="text-[15px] text-muted max-w-[440px] mx-auto">
-            Milestones, wins, and moments I&apos;m proud of.
-          </p>
+          <h2 className="section-title">Featured</h2>
         </div>
       </FadeIn>
 
@@ -65,9 +58,7 @@ export default function Featured() {
         {featured.map((item, i) => (
           <FadeIn key={item.title} delay={i * 0.08}>
             <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
+
               className="featured-tile group block"
             >
               {/* Image area */}
@@ -98,10 +89,10 @@ export default function Featured() {
 
               {/* Text content */}
               <div className="pt-4 px-1">
-                <h3 className="font-serif text-base md:text-lg text-ink leading-snug group-hover:text-accent transition-colors duration-300">
+                <h3 className="font-sans text-lg md:text-xl font-medium text-ink leading-snug group-hover:text-accent transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-[13px] text-muted mt-1">{item.date}</p>
+                <p className="text-[14px] text-muted mt-1.5">{item.date}</p>
               </div>
             </a>
           </FadeIn>

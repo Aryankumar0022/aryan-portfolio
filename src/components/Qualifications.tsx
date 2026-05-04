@@ -5,12 +5,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 /* ── Data ── */
-type TimelineItem = {
+type QualItem = {
   title: string;
   subtitle: string;
   date: string;
   description: string;
-  link: string;
+  link?: string;
 };
 
 const tabs = ["Education", "Experience", "Achievements"] as const;
@@ -34,7 +34,7 @@ const tabIcons: Record<Tab, React.ReactNode> = {
   ),
 };
 
-const data: Record<Tab, TimelineItem[]> = {
+const data: Record<Tab, QualItem[]> = {
   Education: [
     {
       title: "B.Tech in Computer Science",
@@ -42,23 +42,6 @@ const data: Record<Tab, TimelineItem[]> = {
       date: "2021 — 2025",
       description:
         "Focused on machine learning, algorithms, and computer vision. Graduated with distinction.",
-      link: "https://example.com/education/btech",
-    },
-    {
-      title: "Higher Secondary (XII)",
-      subtitle: "Delhi Public School",
-      date: "2019 — 2021",
-      description:
-        "Science stream with Computer Science. Scored 95% in board examinations.",
-      link: "https://example.com/education/school",
-    },
-    {
-      title: "Secondary (X)",
-      subtitle: "Delhi Public School",
-      date: "2017 — 2019",
-      description:
-        "Foundation in mathematics and sciences. Scored 94% in board examinations.",
-      link: "https://example.com/education/secondary",
     },
   ],
   Experience: [
@@ -68,7 +51,6 @@ const data: Record<Tab, TimelineItem[]> = {
       date: "Jun 2024 — Aug 2024",
       description:
         "Built real-time defect detection pipeline using PyTorch and deployed on edge devices.",
-      link: "https://example.com/experience/techcorp",
     },
     {
       title: "Research Assistant",
@@ -76,7 +58,6 @@ const data: Record<Tab, TimelineItem[]> = {
       date: "Jan 2024 — May 2024",
       description:
         "Contributed to a paper on efficient transformer architectures for on-device NLP.",
-      link: "https://example.com/experience/research",
     },
     {
       title: "Full Stack Developer",
@@ -84,7 +65,6 @@ const data: Record<Tab, TimelineItem[]> = {
       date: "2022 — 2023",
       description:
         "Designed and shipped 3 production web apps using React, Next.js, and Node.js for startups.",
-      link: "https://example.com/experience/freelance",
     },
   ],
   Achievements: [
@@ -120,15 +100,12 @@ export default function Qualifications() {
   const [active, setActive] = useState<Tab>("Education");
 
   return (
-    <section id="qualifications" className="py-16 md:py-24">
-      <hr className="section-divider mb-16 md:mb-24" />
+    <section id="qualifications" className="py-10 md:py-14">
+
 
       <FadeIn>
         <div className="text-center mb-12">
-          <span className="section-label justify-center">Qualifications</span>
-          <h2 className="section-heading">
-            My <span className="text-accent italic">journey</span>.
-          </h2>
+          <h2 className="section-title">Qualifications</h2>
         </div>
       </FadeIn>
 
@@ -148,7 +125,7 @@ export default function Qualifications() {
         </div>
       </FadeIn>
 
-      {/* Timeline content */}
+      {/* Card content */}
       <div className="max-w-[700px] mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
@@ -158,57 +135,44 @@ export default function Qualifications() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="relative">
-              {/* Vertical timeline line */}
-              <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-line" />
+            <div className="space-y-5">
+              {data[active].map((item, i) => (
+                <FadeIn key={item.title} delay={i * 0.08}>
+                  <div className="glass-card p-5 md:p-6 hover:border-accent/30 transition-all duration-300">
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <h3 className="font-sans text-lg md:text-xl font-medium text-ink leading-tight">
+                        {item.title}
+                      </h3>
+                      <span className="text-[11px] font-medium text-accent whitespace-nowrap shrink-0 mt-1">
+                        {item.date}
+                      </span>
+                    </div>
 
-              <div className="space-y-8">
-                {data[active].map((item, i) => (
-                  <FadeIn key={item.title} delay={i * 0.08}>
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block group"
-                    >
-                      <div className="relative pl-9">
-                        {/* Timeline dot */}
-                        <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full border-2 border-accent bg-surface-solid flex items-center justify-center group-hover:bg-accent-light transition-colors duration-300">
-                          <div className="w-2 h-2 rounded-full bg-accent" />
-                        </div>
+                    <p className="text-[14px] font-medium text-accent/70 mb-2">
+                      {item.subtitle}
+                    </p>
 
-                        {/* Card */}
-                        <div className="glass-card p-5 md:p-6 group-hover:border-accent/30 transition-all duration-300">
-                          <div className="flex items-start justify-between gap-3 mb-2">
-                            <h3 className="font-serif text-base md:text-lg text-ink leading-tight">
-                              {item.title}
-                            </h3>
-                            <span className="text-[11px] font-medium text-accent whitespace-nowrap shrink-0 mt-1">
-                              {item.date}
-                            </span>
-                          </div>
+                    <p className="text-[14px] leading-[1.75] body-text">
+                      {item.description}
+                    </p>
 
-                          <p className="text-[13px] font-medium text-accent/70 mb-2">
-                            {item.subtitle}
-                          </p>
-
-                          <p className="text-[13px] leading-[1.7] body-text">
-                            {item.description}
-                          </p>
-
-                          {/* Arrow indicator */}
-                          <div className="flex items-center gap-1 mt-3 text-[11px] text-muted group-hover:text-accent transition-colors duration-300">
-                            <span>View details</span>
-                            <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </FadeIn>
-                ))}
-              </div>
+                    {/* Show link only for Achievements */}
+                    {item.link && (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 mt-3 text-[11px] text-muted hover:text-accent transition-colors duration-300 group"
+                      >
+                        <span>View details</span>
+                        <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </FadeIn>
+              ))}
             </div>
           </motion.div>
         </AnimatePresence>

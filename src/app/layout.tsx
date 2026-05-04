@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, Playfair_Display } from "next/font/google";
+import { Inter, DM_Serif_Display, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -11,10 +11,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-instrument-serif",
+  variable: "--font-dm-serif",
   display: "swap",
 });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${playfairDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable} ${playfairDisplay.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider>
           <Nav />

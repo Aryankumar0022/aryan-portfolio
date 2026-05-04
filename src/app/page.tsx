@@ -4,7 +4,6 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Qualifications from "@/components/Qualifications";
 import Featured from "@/components/Featured";
-import Interests from "@/components/Interests";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
       <Skills />
       <Qualifications />
       <Featured />
-      <Interests />
       <Contact />
     </div>
   );

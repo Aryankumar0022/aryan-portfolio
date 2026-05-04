@@ -8,7 +8,8 @@ export type Project = {
   outcome: string;
   gradient: string;
   icon: string;
-  link?: string;
+  github: string;
+  live: string;
 };
 
 export const projects: Project[] = [
@@ -26,6 +27,8 @@ export const projects: Project[] = [
       "Reduced manual inspection time by ~60% with consistent precision across batches.",
     gradient: "from-emerald-400/20 to-teal-500/20",
     icon: "👁",
+    github: "https://github.com/your-username/defect-detection",
+    live: "https://defect-detection-demo.vercel.app",
   },
   {
     title: "Semantic Search for Research Papers",
@@ -41,6 +44,8 @@ export const projects: Project[] = [
       "Sub-second semantic queries across thousands of papers from a clean local UI.",
     gradient: "from-blue-400/20 to-indigo-500/20",
     icon: "🔍",
+    github: "https://github.com/your-username/semantic-search",
+    live: "https://semantic-search-demo.vercel.app",
   },
   {
     title: "Aerodynamics Visualizer",
@@ -56,6 +61,8 @@ export const projects: Project[] = [
       "A teaching tool I still come back to when sketching ideas.",
     gradient: "from-amber-400/20 to-orange-500/20",
     icon: "🌊",
+    github: "https://github.com/your-username/aero-visualizer",
+    live: "https://aero-visualizer-demo.vercel.app",
   },
   {
     title: "Real-time Pose Estimation",
@@ -71,5 +78,7 @@ export const projects: Project[] = [
       "Achieved 30fps pose tracking on mid-range smartphones with <50ms latency.",
     gradient: "from-purple-400/20 to-pink-500/20",
     icon: "🤸",
+    github: "https://github.com/your-username/pose-estimation",
+    live: "https://pose-estimation-demo.vercel.app",
   },
 ];
