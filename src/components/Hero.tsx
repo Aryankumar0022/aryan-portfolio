@@ -89,27 +89,18 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="font-sans text-[1.6rem] md:text-[2rem] font-medium tracking-tight text-accent mt-3"
           >
-            Software Engineer
+            Full Stack Developer
           </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-[1.1rem] md:text-[1.25rem] text-muted mt-2 font-normal"
-          >
-            I build things that matter.
-          </motion.p>
+
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-            className="mt-6 max-w-[440px] mx-auto text-[20px] text-muted leading-[1.8] text-left translate-x-3 md:translate-x-5"
+            className="mt-6 max-w-[440px] mx-auto text-[18px] text-muted leading-[1.8] text-justify translate-x-3 md:translate-x-5"
           >
-            Working at the intersection of machine learning, computer vision,
-            and thoughtful engineering. I turn complex research into things
-            people can actually use.
+            Full Stack Developer skilled in building web applications and solving complex problems using Java, with a focus on efficient code. AI enthusiast integrating machine learning to create intelligent, data-driven solutions.
           </motion.p>
 
           {/* Buttons */}
@@ -157,21 +148,21 @@ export default function Hero() {
 
         {/* Right — Photo with wobbly blob animation */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="order-1 md:order-2 flex justify-center"
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="order-1 md:order-2 flex justify-center -translate-x-8 md:-translate-x-30"
         >
           <div className="relative">
             {/* Glow behind photo */}
             <div className="absolute inset-0 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-accent/10 blur-3xl scale-110 hero-wobble" />
 
             {/* Wobbly blob-shaped photo */}
-            <div className="hero-wobble relative overflow-hidden w-[280px] h-[320px] md:w-[360px] md:h-[400px]"
+            <div className="hero-wobble relative overflow-hidden w-[320px] h-[360px] md:w-[420px] md:h-[460px]"
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
             >
               <Image
-                src="/images/aryan-hero.jpg"
+                src="/images/aryan-hero.png"
                 alt="Aryan Kumar"
                 fill
                 className="object-cover"

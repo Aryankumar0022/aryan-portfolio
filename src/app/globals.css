@@ -157,7 +157,7 @@ body::after {
 .section-title {
   font-family: var(--font-sans);
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
   color: var(--color-ink);
@@ -211,12 +211,12 @@ body::after {
   border-radius: 1px;
 }
 
-/* ── Divider ── */
+/* ── Divider ──
 .section-divider {
   height: 1px;
   border: none;
   background: linear-gradient(90deg, transparent, var(--color-line) 15%, var(--color-line) 85%, transparent);
-}
+} */
 
 /* ── Image treatment ── */
 .img-frame {
@@ -331,11 +331,11 @@ body::after {
 
 /* ── Hero wobble animation ── */
 .hero-wobble {
-  animation: wobble 8s ease-in-out infinite;
+  animation: wobble 4s ease-in-out infinite;
 }
 
 .hero-wobble-reverse {
-  animation: wobble-reverse 8s ease-in-out infinite;
+  animation: wobble-reverse 4s ease-in-out infinite;
 }
 
 @keyframes wobble {
@@ -407,10 +407,10 @@ body::after {
   font-size: 12px;
   font-weight: 500;
   color: var(--color-ink);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--color-surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-line);
 }
 
 /* ── Availability dot ── */
@@ -545,16 +545,18 @@ body::after {
   border-color: rgba(94, 232, 154, 0.2);
 }
 
-/* ── Glass cards ── */
-.dark-theme .glass-card {
+/* ── Glass cards & Featured tiles ── */
+.dark-theme .glass-card,
+.dark-theme .featured-tile {
   background: rgba(22, 52, 34, 0.65);
-  border-color: rgba(42, 94, 60, 0.6);
+  border-color: #000000;
   backdrop-filter: blur(16px);
 }
 
-.dark-theme .glass-card:hover {
+.dark-theme .glass-card:hover,
+.dark-theme .featured-tile:hover {
   box-shadow: 0 12px 40px rgba(94, 232, 154, 0.06), 0 2px 8px rgba(94, 232, 154, 0.03);
-  border-color: rgba(94, 232, 154, 0.3);
+  border-color: #000000;
 }
 
 /* ── Skill pills ── */
@@ -632,8 +634,8 @@ body::after {
 }
 
 /* Muted text everywhere */
-.dark-theme .text-muted,
-.dark-theme [class*="text-muted"] {
+.dark-theme .text-muted:not(.group:hover *),
+.dark-theme [class*="text-muted"]:not(.group:hover *) {
   color: #b0ccb8;
 }
 

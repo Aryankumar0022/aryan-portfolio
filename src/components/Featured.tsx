@@ -14,24 +14,24 @@ type FeaturedItem = {
 
 const featured: FeaturedItem[] = [
   {
-    title: "Secured 1st position in National Buildathon",
-    date: "August 2025",
-    keyword: "Buildathon",
-    image: "/images/featured-1.jpg",
+    title: "Secured 1st position in Snap Syntax Verge 2026",
+    date: "April 2026",
+    keyword: "Coding Challenge",
+    image: "/images/Snap-syntax.JPG",
 
   },
   {
-    title: "Runner-up at AMHacks Hackathon",
-    date: "April 2025",
-    keyword: "AMHacks",
-    image: "/images/featured-2.jpg",
+    title: "Secured 2nd position in Innowave Verge 2026",
+    date: "April 2026",
+    keyword: "Innowave Verge",
+    image: "/images/Innowave-Verge.JPG.png",
 
   },
   {
-    title: "Published Research Paper at IEEE Conference",
-    date: "December 2024",
-    keyword: "IEEE Research",
-    image: "/images/featured-3.jpg",
+    title: "Participated in Smart India Hackathon 2025",
+    date: "September 2025",
+    keyword: "Smart India Hackathon",
+    image: "/images/Smart-india-Hackathon.png",
 
   },
   {
@@ -61,10 +61,18 @@ export default function Featured() {
 
               className="featured-tile group block"
             >
-              {/* Image area */}
-              <div className="relative h-52 md:h-60 rounded-xl overflow-hidden">
-                {/* Placeholder gradient — replace with real images */}
-                <div className={`absolute inset-0 ${placeholderGradient(i)}`} />
+              <div className="relative h-52 md:h-60 rounded-xl overflow-hidden bg-surface-solid">
+                {/* Image */}
+                {item.image && item.image !== "" ? (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className={`absolute inset-0 ${placeholderGradient(i)}`} />
+                )}
 
                 {/* Glassmorphic keyword badge */}
                 <div className="absolute bottom-3 left-3 z-10">
@@ -84,7 +92,7 @@ export default function Featured() {
                 </div>
 
                 {/* Hover glass overlay */}
-                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 backdrop-blur-0 group-hover:backdrop-blur-[2px] transition-all duration-500 z-[5]" />
+                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500 z-[5]" />
               </div>
 
               {/* Text content */}

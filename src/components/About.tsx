@@ -22,7 +22,7 @@ export default function About() {
                 <div className="absolute inset-0 rounded-2xl bg-accent/6 blur-xl scale-105" />
                 <div className="absolute -inset-1.5 rounded-xl border border-accent/10 rotate-1" />
                 <Image
-                  src="/images/aryan-about.jpg"
+                  src="/images/about-me.jpg"
                   alt="Aryan Kumar"
                   width={360}
                   height={440}
@@ -34,22 +34,13 @@ export default function About() {
 
           {/* Text — right side */}
           <FadeIn delay={0.1}>
-            <div className="space-y-5 text-[20px] leading-[1.85] body-text text-center md:text-left">
+            <div className="space-y-5 text-[18px] leading-[1.85] body-text text-justify">
               <p>
-                I&apos;m a software engineer drawn to problems where mathematics,
-                perception, and engineering overlap — most often in machine
-                learning and computer vision.
-              </p>
-              <p>
-                My work tends to start with curiosity rather than a brief.
-                I like building things that are small, sharp, and quietly
-                useful — and rewriting them until they feel inevitable.
-              </p>
-              <p className="text-muted">
-                Outside of work, I read about aerodynamics, propulsion, and
-                the slow craft of getting things off the ground. There&apos;s
-                something about the rigor behind flight that mirrors what
-                I love about good engineering.
+                I am a Full Stack Web Developer with a strong focus on building scalable and efficient web applications. I have a solid foundation in data structures and algorithms, using Java to solve complex problems and write optimized code.
+
+                I am particularly interested in developing end-to-end solutions that combine intuitive user interfaces with robust backend systems. Alongside web development, I actively explore Artificial Intelligence and machine learning, aiming to integrate data-driven intelligence into modern applications.
+
+                I am continuously learning, improving my technical skills, and working on projects that challenge my problem-solving abilities while creating meaningful and impactful solutions.
               </p>
 
               {/* View Resume */}
