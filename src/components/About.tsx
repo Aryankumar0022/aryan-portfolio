@@ -46,7 +46,7 @@ export default function About() {
               {/* View Resume */}
               <div className="pt-3 flex justify-center md:justify-start">
                 <a
-                  href="https://drive.google.com/file/d/1hgMVgoeF3HczS0_TQQPPsnNve1E04T2N/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1VcvdDx5ntjn8uVyWVtUimcs9m4BXyPOu/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline inline-flex items-center gap-4 px-15 py-6 text-2xl"
