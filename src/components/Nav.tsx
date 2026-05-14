@@ -28,7 +28,7 @@ export default function Nav() {
             : "bg-transparent border-b border-transparent"
         }`}
     >
-      <nav className="mx-auto flex max-w-page items-center justify-between px-6 py-4 md:px-8">
+      <nav className="mx-auto flex max-w-[1060px] items-center justify-between px-6 py-4 md:px-8">
         <Link
           href="/"
           className="font-serif text-xl tracking-tightish text-ink hover:text-accent transition-colors duration-300"

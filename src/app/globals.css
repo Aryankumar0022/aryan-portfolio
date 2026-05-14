@@ -331,11 +331,13 @@ body::after {
 
 /* ── Hero wobble animation ── */
 .hero-wobble {
-  animation: wobble 4s ease-in-out infinite;
+  animation: wobble 12s ease-in-out infinite;
+  will-change: border-radius;
 }
 
 .hero-wobble-reverse {
-  animation: wobble-reverse 4s ease-in-out infinite;
+  animation: wobble-reverse 12s ease-in-out infinite;
+  will-change: border-radius;
 }
 
 @keyframes wobble {

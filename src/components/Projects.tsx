@@ -28,7 +28,7 @@ export default function Projects() {
       </FadeIn>
 
       <div className="mx-auto max-w-[1060px]">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2">
 
           <AnimatePresence mode="popLayout">
             {visible.map((p, i) => {
@@ -53,7 +53,7 @@ export default function Projects() {
 
                       {/* Project Image Header */}
                       <div
-                        className={`relative h-40 md:h-52 overflow-hidden bg-gradient-to-br ${p.gradient} cursor-pointer`}
+                        className={`relative h-36 md:h-44 overflow-hidden bg-gradient-to-br ${p.gradient} cursor-pointer`}
                         onClick={() => toggle(p.title)}
                       >
 

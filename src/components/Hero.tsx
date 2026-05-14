@@ -58,11 +58,11 @@ export default function Hero() {
   const isDark = theme === "dark";
 
   return (
-    <section className="relative pt-10 pb-12 md:pt-16 md:pb-20 min-h-[calc(100vh-80px)] flex items-center">
-      {/* Two-column layout */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
+    <section className="relative py-20 md:py-28 lg:py-32 flex items-center justify-center">
+      {/* Two-column layout — max-width keeps symmetry at all zoom levels */}
+      <div className="w-full max-w-[1060px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
         {/* Left — Text content */}
-        <div className="order-2 md:order-1 text-center">
+        <div className="order-2 md:order-1 text-center md:text-left">
 
           <motion.h1
             initial={{ opacity: 0, y: 14 }}
@@ -98,7 +98,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-            className="mt-6 max-w-[440px] mx-auto text-[18px] text-muted leading-[1.8] text-justify translate-x-3 md:translate-x-5"
+            className="mt-6 max-w-[440px] mx-auto md:mx-0 text-[18px] text-muted leading-[1.8] text-justify"
           >
             Full Stack Developer skilled in building web applications and solving complex problems using Java, with a focus on efficient code. AI enthusiast integrating machine learning to create intelligent, data-driven solutions.
           </motion.p>
@@ -108,7 +108,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-4"
+            className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4"
           >
             <a href="#projects" className="btn-primary">
               View my work
@@ -129,7 +129,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.55, ease: "easeOut" }}
-            className="flex items-center justify-center gap-5 mt-8"
+            className="flex items-center justify-center md:justify-start gap-5 mt-8"
           >
             {socials.map((s) => (
               <a
@@ -151,7 +151,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="order-1 md:order-2 flex justify-center -translate-x-8 md:-translate-x-30"
+          className="order-1 md:order-2 flex justify-center"
         >
           <div className="relative">
             {/* Glow behind photo */}
