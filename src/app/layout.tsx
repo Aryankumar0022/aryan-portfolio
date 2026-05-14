@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, DM_Serif_Display, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -51,6 +52,7 @@ export default function RootLayout({
           <main className="mx-auto max-w-page px-6 md:px-8">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
