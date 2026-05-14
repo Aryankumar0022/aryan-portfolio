@@ -19,6 +19,16 @@ export default function Nav() {
     ? "bg-[#162b1e]/90 backdrop-blur-xl border-b border-[#2a5e3c]/50 shadow-[0_1px_12px_rgba(0,0,0,0.3)]"
     : "bg-bg/70 backdrop-blur-xl border-b border-line/40 shadow-[0_1px_12px_rgba(45,106,79,0.04)]";
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
@@ -31,6 +41,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-[1060px] items-center justify-between px-6 py-4 md:px-8">
         <Link
           href="/"
+          onClick={scrollToTop}
           className="font-serif text-xl tracking-tightish text-ink hover:text-accent transition-colors duration-300"
         >
           AK
