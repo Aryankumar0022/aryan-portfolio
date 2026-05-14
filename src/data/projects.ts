@@ -10,7 +10,8 @@ export interface Project {
   icon: string;
   image: string;
   github: string;
-live?: string;}
+  live?: string;
+}
 
 export const projects: Project[] = [
   {
@@ -43,7 +44,7 @@ export const projects: Project[] = [
 
     image: "/images/Autocinema.png",
 
-    github: "https://github.com/your-username/autocinema",
+    github: "https://github.com/Aryankumar0022/Autocinema-playful.git",
 
     // live: "https://autocinema-demo.vercel.app",
   },
@@ -78,7 +79,7 @@ export const projects: Project[] = [
 
     image: "/images/Aria.png",
 
-    github: "https://github.com/your-username/aria",
+    github: "https://github.com/Aryankumar0022/Aria-Agent.git",
 
     // live: "https://aria-demo.vercel.app",
   },
@@ -113,7 +114,7 @@ export const projects: Project[] = [
 
     image: "/images/ClipMagic.png",
 
-    github: "https://github.com/your-username/clipmagic",
+    github: "https://github.com/Aryankumar0022/ClipMagic.git",
 
     // live: "https://clipmagic-demo.vercel.app",
   },
@@ -148,7 +149,7 @@ export const projects: Project[] = [
 
     image: "/images/MovieRecommender.png",
 
-    github: "https://github.com/your-username/movie-recommender",
+    github: "https://github.com/Aryankumar0022/Movie_Recommender.git",
 
     // live: "https://movie-recommender-demo.vercel.app",
   },
