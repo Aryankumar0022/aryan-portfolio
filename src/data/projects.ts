@@ -1,6 +1,6 @@
-export type Project = {
+export interface Project {
   title: string;
-  year: string;
+  // year: string;
   description: string;
   problem: string;
   approach: string;
@@ -8,77 +8,148 @@ export type Project = {
   outcome: string;
   gradient: string;
   icon: string;
+  image: string;
   github: string;
-  live: string;
-};
+live?: string;}
 
 export const projects: Project[] = [
   {
-    title: "Vision-based Defect Detection",
-    year: "2024",
+    title: "AutoCinema",
+    // year: "2026",
     description:
-      "AI-powered visual inspection system for manufacturing quality assurance on edge hardware.",
+      "AI-powered platform that converts text scripts into fully edited short-form vertical videos.",
+
     problem:
-      "Manual QA on a manufacturing line was slow and inconsistent across shifts.",
+      "Creating short-form content manually is time-consuming and requires multiple tools.",
+
     approach:
-      "Trained a lightweight CNN on a curated defect dataset and deployed it on edge hardware with a thin inspection UI.",
-    tech: ["PyTorch", "ONNX", "FastAPI", "Next.js"],
+      "Built an automated pipeline for script understanding, AI image generation, voiceover synthesis, subtitles, and video rendering.",
+
+    tech: [
+      "React",
+      "Next.js",
+      "FastAPI",
+      "Python",
+      "FFmpeg",
+      "SQLite",
+    ],
+
     outcome:
-      "Reduced manual inspection time by ~60% with consistent precision across batches.",
-    gradient: "from-emerald-400/20 to-teal-500/20",
-    icon: "👁",
-    github: "https://github.com/your-username/defect-detection",
-    live: "https://defect-detection-demo.vercel.app",
+      "Generated complete TikTok/Reels/Shorts videos automatically from simple prompts.",
+
+    gradient: "from-cyan-400/20 to-blue-500/20",
+
+    icon: "🎬",
+
+    image: "/images/Autocinema.png",
+
+    github: "https://github.com/your-username/autocinema",
+
+    // live: "https://autocinema-demo.vercel.app",
   },
+
   {
-    title: "Semantic Search for Research Papers",
-    year: "2024",
+    title: "ARIA",
+    // year: "2026",
+
     description:
-      "Natural language search engine for navigating large ML paper libraries using embeddings.",
+      "Autonomous AI assistant that manages scheduling, reservations, and personalized planning.",
+
     problem:
-      "Keyword search felt blunt for navigating a personal library of ML papers.",
+      "Managing appointments and resolving calendar conflicts manually becomes inefficient.",
+
     approach:
-      "Embedded papers with a sentence-transformer model and built a minimal retrieval layer with re-ranking.",
-    tech: ["Python", "Sentence-Transformers", "FAISS", "TypeScript"],
+      "Built a conversational AI agent capable of handling task planning, reminders, and recommendations.",
+
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "OpenAI",
+      "FastAPI",
+      "PostgreSQL",
+    ],
+
     outcome:
-      "Sub-second semantic queries across thousands of papers from a clean local UI.",
-    gradient: "from-blue-400/20 to-indigo-500/20",
-    icon: "🔍",
-    github: "https://github.com/your-username/semantic-search",
-    live: "https://semantic-search-demo.vercel.app",
+      "Delivered a natural-language AI assistant experience for daily life management.",
+
+    gradient: "from-orange-400/20 to-rose-500/20",
+
+    icon: "🧠",
+
+    image: "/images/Aria.png",
+
+    github: "https://github.com/your-username/aria",
+
+    // live: "https://aria-demo.vercel.app",
   },
+
   {
-    title: "Aerodynamics Visualizer",
-    year: "2023",
+    title: "ClipMagic",
+    // year: "2025",
+
     description:
-      "Interactive browser-based CFD solver for visualizing airflow over 2D airfoil profiles.",
+      "AI-powered short-form video generator that converts long YouTube videos into engaging clips.",
+
     problem:
-      "Wanted an intuitive way to study airflow over simple 2D profiles.",
+      "Content creators spend hours manually trimming long videos into short viral clips.",
+
     approach:
-      "Implemented a small CFD solver and visualized streamlines and pressure fields in the browser.",
-    tech: ["TypeScript", "WebGL", "NumPy"],
+      "Automated clipping, caption generation, reframing, and highlight extraction using AI.",
+
+    tech: [
+      "Python",
+      "FastAPI",
+      "FFmpeg",
+      "Whisper",
+      "React",
+    ],
+
     outcome:
-      "A teaching tool I still come back to when sketching ideas.",
-    gradient: "from-amber-400/20 to-orange-500/20",
-    icon: "🌊",
-    github: "https://github.com/your-username/aero-visualizer",
-    live: "https://aero-visualizer-demo.vercel.app",
+      "Reduced editing workflow from hours to seconds for short-form content creation.",
+
+    gradient: "from-fuchsia-400/20 to-violet-500/20",
+
+    icon: "✂️",
+
+    image: "/images/ClipMagic.png",
+
+    github: "https://github.com/your-username/clipmagic",
+
+    // live: "https://clipmagic-demo.vercel.app",
   },
+
   {
-    title: "Real-time Pose Estimation",
-    year: "2023",
+    title: "Movie Recommender System",
+    // year: "2026",
+
     description:
-      "Lightweight pose detection model optimized for real-time inference on mobile devices.",
+      "Netflix-style recommendation engine built using collaborative filtering and matrix factorization.",
+
     problem:
-      "Existing pose estimation models were too heavy for real-time mobile use.",
+      "Finding relevant movies becomes difficult with large streaming catalogs.",
+
     approach:
-      "Distilled a larger model into a compact architecture and optimized with TensorRT for mobile inference.",
-    tech: ["TensorFlow Lite", "Python", "React Native", "MediaPipe"],
+      "Implemented Truncated SVD-based collaborative filtering on the MovieLens dataset.",
+
+    tech: [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Streamlit",
+    ],
+
     outcome:
-      "Achieved 30fps pose tracking on mid-range smartphones with <50ms latency.",
-    gradient: "from-purple-400/20 to-pink-500/20",
-    icon: "🤸",
-    github: "https://github.com/your-username/pose-estimation",
-    live: "https://pose-estimation-demo.vercel.app",
+      "Generated personalized movie recommendations with optimized RMSE performance.",
+
+    gradient: "from-yellow-400/20 to-red-500/20",
+
+    icon: "🎥",
+
+    image: "/images/MovieRecommender.png",
+
+    github: "https://github.com/your-username/movie-recommender",
+
+    // live: "https://movie-recommender-demo.vercel.app",
   },
 ];

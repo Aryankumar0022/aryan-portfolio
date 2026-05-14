@@ -71,7 +71,7 @@ export default function Contact() {
 
             {/* X */}
             <a
-              href="https://x.com/aryankumar120"
+              href="https://x.com/callmewhensleep"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center h-[60px] glass-card rounded-[30px] px-[18px] transition-all duration-500 ease-out hover:px-6 hover:shadow-lg hover:-translate-y-1 hover:border-[#1DA1F2]/40"
@@ -82,7 +82,7 @@ export default function Contact() {
                 </svg>
               </span>
               <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[150px] group-hover:opacity-100 group-hover:ml-3 transition-all duration-500 ease-out font-sans font-medium whitespace-nowrap text-ink">
-                aryankumar120
+                
               </span>
             </a>
           </div>

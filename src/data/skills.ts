@@ -17,8 +17,8 @@ export const skills: SkillGroup[] = [
     icon: "💻",
     items: [
       { name: "Java", level: "Intermediate" },
-      { name: "JavaScript", level: "Advanced" },
-      { name: "Python", level: "Advanced" },
+      { name: "JavaScript", level: "Intermediate" },
+      { name: "Python", level: "Intermediate" },
     ],
   },
   // {
@@ -40,17 +40,17 @@ export const skills: SkillGroup[] = [
       { name: "CSS", level: "Advanced" },
       { name: "Tailwind CSS", level: "Advanced" },
       { name: "TypeScript", level: "Advanced" },
-      { name: "React", level: "Advanced" },
-      { name: "Next.js", level: "Intermediate" },
+      { name: "React", level: "Intermediate" },
+      
     ],
   },
   {
     category: "Backend",
     icon: "⚙️",
     items: [
-      { name: "FastAPI", level: "Advanced" },
+      { name: "Express.js", level: "Intermediate" },
       { name: "Node.js", level: "Intermediate" },
-      { name: "REST APIs", level: "Advanced" },
+      { name: "REST APIs", level: "Intermediate" },
     ],
   },
 
@@ -67,11 +67,11 @@ export const skills: SkillGroup[] = [
     category: "Tooling",
     icon: "🛠",
     items: [
-      { name: "Docker", level: "Intermediate" },
+      { name: "Docker", level: "Beginner" },
       { name: "Git", level: "Intermediate" },
       { name: "GitHub", level: "Intermediate" },
       { name: "Postman", level: "Intermediate" },
-      { name: "Kubernetes", level: "Intermediate" },
+      { name: "Kubernetes", level: "Beginner" },
     ],
   },
 ];

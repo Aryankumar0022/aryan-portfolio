@@ -38,20 +38,19 @@ const data: Record<Tab, QualItem[]> = {
   Education: [
     {
       title: "Undergraduation in Computer Science",
-      subtitle: "Srm University Sonepat",
+      subtitle: "Srm University, Sonepat",
       date: "2024 — 2027",
       description:
-        "Focused on Web development and machine learning, algorithm and computer vision.",
+        "Focused on Web development, AI, Machine Learning, Data Structures & Algorithm and problem solving.",
     },
   ],
 
   Experience: [
     {
-      title: "Techspace, Verge",
-      subtitle: "Technical Society, SRM University",
-      date: "August 2024 — Present",
-      description:
-        "Conducted workshops and seminars and actively participated in organizing hackathons, coding competitions, and other technical events.",
+      title: "Vice President",
+      subtitle: "Techspace, Verge",
+      date: "August 2025 — Present",
+      description: "Conducted workshops and seminars and actively participated in organizing hackathons, coding competitions, and other technical events."
     },
 
     // {
