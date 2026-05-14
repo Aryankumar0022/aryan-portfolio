@@ -32,10 +32,10 @@ export default function Nav() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
-          ? scrolledBg
-          : isDark
-            ? "bg-transparent border-b border-transparent"
-            : "bg-transparent border-b border-transparent"
+        ? scrolledBg
+        : isDark
+          ? "bg-transparent border-b border-transparent"
+          : "bg-transparent border-b border-transparent"
         }`}
     >
       <nav className="mx-auto flex max-w-[1060px] items-center justify-between px-6 py-4 md:px-8">
@@ -63,8 +63,8 @@ export default function Nav() {
 
           {/* Availability badge */}
           <div className={`flex items-center gap-2 text-[12px] font-medium px-3 py-1.5 rounded-full border ${isDark
-              ? "bg-[#1a3d28] border-[#2a5e3c] text-[#5ee89a]"
-              : "bg-accent-light text-muted border-accent/10"
+            ? "bg-[#1a3d28] border-[#2a5e3c] text-[#5ee89a]"
+            : "bg-accent-light text-muted border-accent/10"
             }`}>
             <span className="status-dot" />
             <span>Available for work</span>
