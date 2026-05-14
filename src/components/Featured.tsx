@@ -23,7 +23,7 @@ const featured: FeaturedItem[] = [
   {
     title: "Secured 2nd position in Innowave Verge 2026",
     date: "April 2026",
-    keyword: "Innowave Verge",
+    keyword: "Business Challenge",
     image: "/images/Innowave-Verge.JPG.png",
 
   },

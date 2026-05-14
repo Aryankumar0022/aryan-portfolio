@@ -13,17 +13,6 @@ export type SkillGroup = {
 
 export const skills: SkillGroup[] = [
   {
-    category: "AI / ML",
-    icon: "🧠",
-    items: [
-      { name: "PyTorch", level: "Advanced" },
-      { name: "TensorFlow", level: "Intermediate" },
-      { name: "scikit-learn", level: "Advanced" },
-      { name: "OpenCV", level: "Advanced" },
-      { name: "Transformers", level: "Intermediate" },
-    ],
-  },
-  {
     category: "Languages",
     icon: "💻",
     items: [
@@ -32,26 +21,39 @@ export const skills: SkillGroup[] = [
       { name: "Python", level: "Advanced" },
     ],
   },
+  // {
+  //   category: "AI / ML",
+  //   icon: "🧠",
+  //   items: [
+  //     { name: "PyTorch", level: "Advanced" },
+  //     { name: "TensorFlow", level: "Intermediate" },
+  //     { name: "scikit-learn", level: "Advanced" },
+  //     { name: "OpenCV", level: "Advanced" },
+  //     { name: "Transformers", level: "Intermediate" },
+  //   ],
+  // },
+  {
+    category: "Frontend",
+    icon: "🎨",
+    items: [
+      { name: "HTML", level: "Advanced" },
+      { name: "CSS", level: "Advanced" },
+      { name: "Tailwind CSS", level: "Advanced" },
+      { name: "TypeScript", level: "Advanced" },
+      { name: "React", level: "Advanced" },
+      { name: "Next.js", level: "Intermediate" },
+    ],
+  },
   {
     category: "Backend",
     icon: "⚙️",
     items: [
       { name: "FastAPI", level: "Advanced" },
       { name: "Node.js", level: "Intermediate" },
-      { name: "Redis", level: "Beginner" },
       { name: "REST APIs", level: "Advanced" },
     ],
   },
-  {
-    category: "Frontend",
-    icon: "🎨",
-    items: [
-      { name: "TypeScript", level: "Advanced" },
-      { name: "React", level: "Advanced" },
-      { name: "Next.js", level: "Intermediate" },
-      { name: "Tailwind CSS", level: "Advanced" },
-    ],
-  },
+
   {
     category: "Databases",
     icon: "🗄️",
@@ -66,10 +68,10 @@ export const skills: SkillGroup[] = [
     icon: "🛠",
     items: [
       { name: "Docker", level: "Intermediate" },
-      { name: "Git", level: "Advanced" },
-      { name: "Linux", level: "Intermediate" },
-      { name: "AWS", level: "Beginner" },
-      { name: "Vercel", level: "Advanced" },
+      { name: "Git", level: "Intermediate" },
+      { name: "GitHub", level: "Intermediate" },
+      { name: "Postman", level: "Intermediate" },
+      { name: "Kubernetes", level: "Intermediate" },
     ],
   },
 ];

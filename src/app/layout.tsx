@@ -27,7 +27,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Aryan Kumar — Software Engineer",
+  title: "Aryan Kumar",
   description:
     "Software Engineer focused on AI, Machine Learning, and Computer Vision. Building thoughtful systems at the intersection of research and product.",
   openGraph: {

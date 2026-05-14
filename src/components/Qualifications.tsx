@@ -37,63 +37,70 @@ const tabIcons: Record<Tab, React.ReactNode> = {
 const data: Record<Tab, QualItem[]> = {
   Education: [
     {
-      title: "B.Tech in Computer Science",
-      subtitle: "Indian Institute of Technology",
-      date: "2021 — 2025",
+      title: "Undergraduation in Computer Science",
+      subtitle: "Srm University Sonepat",
+      date: "2024 — 2027",
       description:
-        "Focused on machine learning, algorithms, and computer vision. Graduated with distinction.",
+        "Focused on Web development and machine learning, algorithm and computer vision.",
     },
   ],
+
   Experience: [
     {
-      title: "ML Engineer Intern",
-      subtitle: "Tech Corp Inc.",
-      date: "Jun 2024 — Aug 2024",
+      title: "Techspace, Verge",
+      subtitle: "Technical Society, SRM University",
+      date: "August 2024 — Present",
       description:
-        "Built real-time defect detection pipeline using PyTorch and deployed on edge devices.",
+        "Conducted workshops and seminars and actively participated in organizing hackathons, coding competitions, and other technical events.",
     },
-    {
-      title: "Research Assistant",
-      subtitle: "AI Lab, University",
-      date: "Jan 2024 — May 2024",
-      description:
-        "Contributed to a paper on efficient transformer architectures for on-device NLP.",
-    },
-    {
-      title: "Full Stack Developer",
-      subtitle: "Freelance",
-      date: "2022 — 2023",
-      description:
-        "Designed and shipped 3 production web apps using React, Next.js, and Node.js for startups.",
-    },
+
+    // {
+    //   title: "Research Assistant",
+    //   subtitle: "AI Lab, University",
+    //   date: "Jan 2024 — May 2024",
+    //   description:
+    //     "Contributed to a paper on efficient transformer architectures for on-device NLP.",
+    // },
+
+    // {
+    //   title: "Full Stack Developer",
+    //   subtitle: "Freelance",
+    //   date: "2022 — 2023",
+    //   description:
+    //     "Designed and shipped 3 production web apps using React, Next.js, and Node.js for startups.",
+    // },
   ],
+
   Achievements: [
     {
-      title: "Winner — National Hackathon",
-      subtitle: "HackIndia 2024",
-      date: "Mar 2024",
+      title: "Snap Syntax Verge 2026",
+      subtitle: "Coding Challenge",
+      date: "April 2026",
       description:
-        "Built an AI-powered accessibility tool that won first place among 500+ teams.",
-      link: "https://example.com/achievements/hackathon",
+        "Secured 1st position in Snap Syntax Verge 2026",
+      // link: "https://example.com/achievements/hackathon",
     },
+
     {
-      title: "Published Research Paper",
-      subtitle: "IEEE Conference",
-      date: "Dec 2023",
+      title: "Innowave Verge 2026",
+      subtitle: "Business Challenge",
+      date: "April 2026",
       description:
-        "Co-authored a paper on lightweight pose estimation for mobile devices.",
-      link: "https://example.com/achievements/paper",
+        "Secured 2nd position in Innowave Verge 2026",
+      // link: "https://example.com/achievements/paper",
     },
-    {
-      title: "Open Source Contributor",
-      subtitle: "TensorFlow & FastAPI",
-      date: "2023 — Present",
-      description:
-        "Active contributor with 15+ merged PRs across popular ML and backend frameworks.",
-      link: "https://example.com/achievements/opensource",
-    },
+
+    // {
+    //   title: "Open Source Contributor",
+    //   subtitle: "TensorFlow & FastAPI",
+    //   date: "2023 — Present",
+    //   description:
+    //     "Active contributor with 15+ merged PRs across popular ML and backend frameworks.",
+    //   link: "https://example.com/achievements/opensource",
+    // },
   ],
 };
+
 
 /* ── Component ── */
 export default function Qualifications() {

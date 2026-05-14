@@ -172,7 +172,7 @@ export default function Hero() {
 
             {/* Decorative border ring */}
             <div
-              className="absolute -inset-2 border-2 border-accent/15 hero-wobble-reverse"
+              className="absolute -inset-2 border-2 border-accent/15 hero-wobble"
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
             />
           </div>
