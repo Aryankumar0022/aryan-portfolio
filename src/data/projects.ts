@@ -42,7 +42,7 @@ export const projects: Project[] = [
 
     icon: "🎬",
 
-    image: "/images/autocinema.png",
+    image: "/images/cinema.png",
 
     github: "https://github.com/Aryankumar0022/Autocinema-playful.git",
 
