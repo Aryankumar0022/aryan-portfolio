@@ -35,15 +35,15 @@ const tabIcons: Record<Tab, React.ReactNode> = {
 };
 
 const data: Record<Tab, QualItem[]> = {
-  Education: [
-    {
-      title: "Undergraduation in Computer Science",
-      subtitle: "Srm University, Sonepat",
-      date: "2024 — 2027",
-      description:
-        "Focused on Web development, AI, Machine Learning, Data Structures & Algorithm and problem solving.",
-    },
-  ],
+ Education: [
+  {
+    title: "Undergraduation in Computer Science",
+    subtitle: "SRM University, Sonepat",
+    date: "2024 — 2027",
+    description:
+      "Focused on Web Development, AI, Machine Learning, Data Structures & Algorithms, and problem solving.",
+  },
+],
 
   Experience: [
     {

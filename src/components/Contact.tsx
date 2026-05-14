@@ -37,7 +37,7 @@ export default function Contact() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/"
+              href="https://wa.me/919350147596"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center h-[60px] glass-card rounded-[30px] px-[18px] transition-all duration-500 ease-out hover:px-6 hover:shadow-lg hover:-translate-y-1 hover:border-[#25D366]/40"
@@ -82,7 +82,7 @@ export default function Contact() {
                 </svg>
               </span>
               <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[150px] group-hover:opacity-100 group-hover:ml-3 transition-all duration-500 ease-out font-sans font-medium whitespace-nowrap text-ink">
-                
+
               </span>
             </a>
           </div>
