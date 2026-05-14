@@ -162,7 +162,7 @@ export default function Hero() {
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
             >
               <Image
-                src="/images/aryan-hero.png"
+                src="/images/42224210145_AryanPhoto.jpg"
                 alt="Aryan Kumar"
                 fill
                 className="object-cover"
